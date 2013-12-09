@@ -13,22 +13,22 @@ $(function(){
           'val': $(this).val()
       },function(data){
         //div class error
-        if( data && hasParentError(parentDiv) == false ){
+        if( data && hasParentError(parentDiv) === false ){
           parentDiv.addClass("error");
-        }else if( data == "" && hasParentError(parentDiv) == true){
+        }else if( data === "" && hasParentError(parentDiv) === true){
           parentDiv.removeClass("error");
         }
         //Error Message
-        if( data && errorMessageDiv[0] == undefined ){
+        if( data && errorMessageDiv[0] === undefined ){
           parentDiv.append("<div class='error-message'>" + data + "</div>");
         }else if( data ){
           errorMessageDiv.text(data);
-        }else if( data == "" && errorMessageDiv[0] != undefined ){
+        }else if( data === "" && errorMessageDiv[0] !== undefined ){
           errorMessageDiv.remove();
         }
       }
     );
-  })
+  });
 });
 
 function getModel(target){
@@ -63,6 +63,6 @@ function hasParentError(parentDiv){
 
 function hasErrorMessage(parentDiv){
   errorMessageDiv = parentDiv.find("div.error-message");
-  hasError = ( errorMessageDiv[0] != undefined );
+  hasError = ( errorMessageDiv[0] !== undefined );
   return hasError;
 }
