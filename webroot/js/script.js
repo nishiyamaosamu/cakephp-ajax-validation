@@ -1,5 +1,5 @@
 $(function(){
-  $('form input, form select').blur(function(){
+  $('form input, form select, form textarea').blur(function(){
     var id = $(this).attr("id");
     var model = getModel(this);
     var field = getField(this);
