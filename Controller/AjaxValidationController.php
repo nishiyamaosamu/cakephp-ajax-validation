@@ -31,7 +31,7 @@ class AjaxValidationController extends AppController {
           $this->set('r', $this->$m->validationErrors[$f][0]);
       }
     }else{
-      $this->log("no data");
+      $this->log("AjaxValidation Error");
     }
   }
 }
