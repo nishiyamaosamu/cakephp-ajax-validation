@@ -23,7 +23,7 @@ Installation
 
 Usage
 ------------
-* When a cursor go out of a form, run validation immediately from models validation settings.
+* When a cursor moves out of a form field, run ajax validation immediately from models validation settings.
 
 
 Sample
