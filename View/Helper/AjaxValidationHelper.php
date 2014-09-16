@@ -17,8 +17,8 @@ class AjaxValidationHelper extends AppHelper {
     parent::__construct($View, $options);
   }
 
-  public function active(){
+  public function active($options = array()){
     $js = '/ajax_validation/js/script.js';
-    echo $this->Html->script($js);
+    echo $this->Html->script($js,$options);
   }
 }
