@@ -17,12 +17,13 @@ Installation
 * Include the helper in your `AppController.php` or a specific Controller:(Ex. Controller/UsersController.php)
     * `public $helpers = array('AjaxValidation.AjaxValidation');`
 * Set some validations in your Models.(Ex. Model/User.php)
-* Set only `$this->AjaxValidation->active();` in your View you want to use AjaxValidation.(Ex. Users/add.ctp)
+* In your layout add a `echo $this->fetch('ajax_validation');`
+* Set only `$this->AjaxValidation->active(array('block' => 'ajax_validation'));` in your View you want to use AjaxValidation.(Ex. Users/add.ctp)
 
 
 Usage
 ------------
-* When a cursol go out of a form, run validation immediately from models validation settings.
+* When a cursor go out of a form, run validation immediately from models validation settings.
 
 
 Sample
